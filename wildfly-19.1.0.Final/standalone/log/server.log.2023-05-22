@@ -1,0 +1,168 @@
+2023-05-22 21:56:49,792 INFO  [org.jboss.modules] (main) JBoss Modules version 1.10.0.Final
+2023-05-22 21:56:51,724 INFO  [org.jboss.msc] (main) JBoss MSC version 1.4.11.Final
+2023-05-22 21:56:51,730 INFO  [org.jboss.threads] (main) JBoss Threads version 2.3.3.Final
+2023-05-22 21:56:51,851 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: WildFly Full 19.1.0.Final (WildFly Core 11.1.1.Final) starting
+2023-05-22 21:56:51,852 DEBUG [org.jboss.as.config] (MSC service thread 1-2) Configured system properties:
+	file.encoding = Cp1252
+	file.separator = \
+	java.class.path = D:\Área de Trabalho\Sistemas para Internet\2023.1\POO\wildfly-19.1.0.Final\jboss-modules.jar
+	java.class.version = 61.0
+	java.home = C:\Users\samue\.jdks\corretto-17.0.4.1
+	java.io.tmpdir = C:\Users\samue\AppData\Local\Temp\
+	java.library.path = C:\Users\samue\.jdks\corretto-17.0.4.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\samue\AppData\Local\Microsoft\WindowsApps;S:\Microsoft VS Code\bin;C:\msys64\mingw64\bin;;.
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 17.0.4.1+9-LTS
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 17
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Amazon.com Inc.
+	java.vendor.url = https://aws.amazon.com/corretto/
+	java.vendor.url.bug = https://github.com/corretto/corretto-17/issues/
+	java.vendor.version = Corretto-17.0.4.9.1
+	java.version = 17.0.4.1
+	java.version.date = 2022-08-12
+	java.vm.compressedOopsMode = 32-bit
+	java.vm.info = mixed mode, sharing
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 17
+	java.vm.vendor = Amazon.com Inc.
+	java.vm.version = 17.0.4.1+9-LTS
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	jboss.home.dir = D:\Área de Trabalho\Sistemas para Internet\2023.1\POO\wildfly-19.1.0.Final
+	jboss.host.name = desktop-lgh6ft4
+	jboss.modules.dir = D:\Área de Trabalho\Sistemas para Internet\2023.1\POO\wildfly-19.1.0.Final\modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = desktop-lgh6ft4
+	jboss.qualified.host.name = desktop-lgh6ft4
+	jboss.server.base.dir = D:\Área de Trabalho\Sistemas para Internet\2023.1\POO\wildfly-19.1.0.Final\standalone
+	jboss.server.config.dir = D:\Área de Trabalho\Sistemas para Internet\2023.1\POO\wildfly-19.1.0.Final\standalone\configuration
+	jboss.server.data.dir = D:\Área de Trabalho\Sistemas para Internet\2023.1\POO\wildfly-19.1.0.Final\standalone\data
+	jboss.server.deploy.dir = D:\Área de Trabalho\Sistemas para Internet\2023.1\POO\wildfly-19.1.0.Final\standalone\data\content
+	jboss.server.log.dir = D:\Área de Trabalho\Sistemas para Internet\2023.1\POO\wildfly-19.1.0.Final\standalone\log
+	jboss.server.name = desktop-lgh6ft4
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = D:\Área de Trabalho\Sistemas para Internet\2023.1\POO\wildfly-19.1.0.Final\standalone\tmp
+	jdk.debug = release
+	line.separator = 
+
+	logging.configuration = file:D:\Área de Trabalho\Sistemas para Internet\2023.1\POO\wildfly-19.1.0.Final\standalone\configuration/logging.properties
+	module.path = D:\Área de Trabalho\Sistemas para Internet\2023.1\POO\wildfly-19.1.0.Final\modules
+	native.encoding = Cp1252
+	org.jboss.boot.log.file = D:\Área de Trabalho\Sistemas para Internet\2023.1\POO\wildfly-19.1.0.Final\standalone\log\server.log
+	org.jboss.resolver.warning = true
+	os.arch = amd64
+	os.name = Windows 11
+	os.version = 10.0
+	path.separator = ;
+	program.name = standalone.bat
+	sun.arch.data.model = 64
+	sun.boot.library.path = C:\Users\samue\.jdks\corretto-17.0.4.1\bin
+	sun.cpu.endian = little
+	sun.cpu.isalist = amd64
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = D:\Área de Trabalho\Sistemas para Internet\2023.1\POO\wildfly-19.1.0.Final\jboss-modules.jar -mp D:\Área de Trabalho\Sistemas para Internet\2023.1\POO\wildfly-19.1.0.Final\modules org.jboss.as.standalone -Djboss.home.dir=D:\Área de Trabalho\Sistemas para Internet\2023.1\POO\wildfly-19.1.0.Final
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = Cp1252
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = 
+	user.country = BR
+	user.dir = D:\Área de Trabalho\Sistemas para Internet\2023.1\POO\wildfly-19.1.0.Final\bin
+	user.home = C:\Users\samue
+	user.language = pt
+	user.name = samue
+	user.script = 
+	user.timezone = America/Sao_Paulo
+	user.variant = 
+2023-05-22 21:56:51,854 DEBUG [org.jboss.as.config] (MSC service thread 1-2) VM Arguments: -Dprogram.name=standalone.bat -Xms64M -Xmx512M -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman --add-exports=java.base/sun.nio.ch=ALL-UNNAMED --add-exports=jdk.unsupported/sun.misc=ALL-UNNAMED --add-exports=jdk.unsupported/sun.reflect=ALL-UNNAMED -Dorg.jboss.boot.log.file=D:\Área de Trabalho\Sistemas para Internet\2023.1\POO\wildfly-19.1.0.Final\standalone\log\server.log -Dlogging.configuration=file:D:\Área de Trabalho\Sistemas para Internet\2023.1\POO\wildfly-19.1.0.Final\standalone\configuration/logging.properties 
+2023-05-22 21:56:52,726 INFO  [org.wildfly.security] (ServerService Thread Pool -- 28) ELY00001: WildFly Elytron version 1.11.4.Final
+2023-05-22 21:56:55,781 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2023-05-22 21:56:55,814 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 32) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2023-05-22 21:56:55,922 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2023-05-22 21:56:55,950 INFO  [org.xnio] (MSC service thread 1-5) XNIO version 3.7.7.Final
+2023-05-22 21:56:55,965 INFO  [org.xnio.nio] (MSC service thread 1-5) XNIO NIO Implementation Version 3.7.7.Final
+2023-05-22 21:56:56,032 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 74) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+2023-05-22 21:56:56,058 INFO  [org.wildfly.extension.microprofile.jwt.smallrye._private] (ServerService Thread Pool -- 63) WFLYJWT0001: Activating WildFly MicroProfile JWT Subsystem
+2023-05-22 21:56:56,064 INFO  [org.wildfly.extension.microprofile.config.smallrye._private] (ServerService Thread Pool -- 61) WFLYCONF0001: Activating WildFly MicroProfile Config Subsystem
+2023-05-22 21:56:56,102 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 52) WFLYCLINF0001: Activating Infinispan subsystem.
+2023-05-22 21:56:56,120 INFO  [org.wildfly.extension.microprofile.health.smallrye] (ServerService Thread Pool -- 62) WFLYHEALTH0001: Activating Eclipse MicroProfile Health Subsystem
+2023-05-22 21:56:56,122 INFO  [org.wildfly.extension.microprofile.metrics.smallrye] (ServerService Thread Pool -- 64) WFLYMETRICS0001: Activating Eclipse MicroProfile Metrics Subsystem
+2023-05-22 21:56:56,129 INFO  [org.wildfly.extension.microprofile.opentracing] (ServerService Thread Pool -- 65) WFLYTRACEXT0001: Activating MicroProfile OpenTracing Subsystem
+2023-05-22 21:56:56,133 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 59) WFLYJSF0007: Activated the following JSF Implementations: [main]
+2023-05-22 21:56:56,190 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 66) WFLYNAM0001: Activating Naming Subsystem
+2023-05-22 21:56:56,247 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 76) WFLYWS0002: Activating WebServices Extension
+2023-05-22 21:56:56,249 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 72) WFLYSEC0002: Activating Security Subsystem
+2023-05-22 21:56:56,279 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0003: Undertow 2.1.0.Final starting
+2023-05-22 21:56:56,301 INFO  [org.jboss.as.security] (MSC service thread 1-6) WFLYSEC0001: Current PicketBox version=5.0.3.Final
+2023-05-22 21:56:56,353 INFO  [org.jboss.as.connector] (MSC service thread 1-4) WFLYJCA0009: Starting JCA Subsystem (WildFly/IronJacamar 1.4.20.Final)
+2023-05-22 21:56:56,383 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 44) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.4)
+2023-05-22 21:56:56,468 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0018: Started Driver service with driver-name = h2
+2023-05-22 21:56:56,469 INFO  [org.jboss.as.naming] (MSC service thread 1-4) WFLYNAM0003: Starting Naming Service
+2023-05-22 21:56:56,492 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-8) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+2023-05-22 21:56:56,539 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 53) WFLYIO001: Worker 'default' has auto-configured to 16 IO threads with 128 max task threads based on your 8 available processors
+2023-05-22 21:56:56,567 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 75) WFLYUT0014: Creating file handler for path 'D:\Área de Trabalho\Sistemas para Internet\2023.1\POO\wildfly-19.1.0.Final/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+2023-05-22 21:56:56,598 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 54) WFLYRS0016: RESTEasy version 3.11.2.Final
+2023-05-22 21:56:56,657 INFO  [org.jboss.remoting] (MSC service thread 1-3) JBoss Remoting version 5.0.17.Final
+2023-05-22 21:56:56,714 INFO  [org.jboss.as.ejb3] (MSC service thread 1-7) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 32 (per class), which is derived from the number of CPUs on this host.
+2023-05-22 21:56:56,714 INFO  [org.jboss.as.ejb3] (MSC service thread 1-4) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 128 (per class), which is derived from thread worker pool sizing.
+2023-05-22 21:56:56,728 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0012: Started server default-server.
+2023-05-22 21:56:56,734 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0018: Host default-host starting
+2023-05-22 21:56:56,795 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8080
+2023-05-22 21:56:56,980 INFO  [org.jboss.as.ejb3] (MSC service thread 1-6) WFLYEJB0493: EJB subsystem suspension complete
+2023-05-22 21:56:57,138 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+2023-05-22 21:57:00,122 INFO  [org.jboss.as.patching] (MSC service thread 1-3) WFLYPAT0050: WildFly Full cumulative patch ID is: base, one-off patches include: none
+2023-05-22 21:57:00,129 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-4) WFLYDM0111: Keystore D:\Área de Trabalho\Sistemas para Internet\2023.1\POO\wildfly-19.1.0.Final\standalone\configuration\application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
+2023-05-22 21:57:00,133 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-3) WFLYDS0013: Started FileSystemDeploymentService for directory D:\Área de Trabalho\Sistemas para Internet\2023.1\POO\wildfly-19.1.0.Final\standalone\deployments
+2023-05-22 21:57:00,139 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) WFLYSRV0027: Starting deployment of "projetoPOO.war" (runtime-name: "projetoPOO.war")
+2023-05-22 21:57:00,186 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8443
+2023-05-22 21:57:01,018 INFO  [org.jboss.ws.common.management] (MSC service thread 1-3) JBWS022052: Starting JBossWS 5.4.1.Final (Apache CXF 3.3.6) 
+2023-05-22 21:57:03,125 INFO  [org.infinispan.factories.GlobalComponentRegistry] (MSC service thread 1-8) ISPN000128: Infinispan version: Infinispan 'Infinity Minus ONE +2' 9.4.18.Final
+2023-05-22 21:57:03,515 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-3) WFLYJCA0005: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 42.3)
+2023-05-22 21:57:03,516 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-3) WFLYJCA0005: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 42.3)
+2023-05-22 21:57:03,517 WARN  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-3) WFLYJCA0003: Unable to instantiate driver class "org.postgresql.Driver": org.jboss.msc.service.DuplicateServiceException: Service jboss.jdbc-driver.projetoPOO_war_org_postgresql_Driver_42_3 is already registered
+2023-05-22 21:57:03,571 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 78) WFLYCLINF0002: Started client-mappings cache from ejb container
+2023-05-22 21:57:03,588 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) WFLYJCA0018: Started Driver service with driver-name = projetoPOO.war_org.postgresql.Driver_42_3
+2023-05-22 21:57:03,588 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) WFLYJCA0018: Started Driver service with driver-name = projetoPOO.war
+2023-05-22 21:57:03,790 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 81) WFLYUT0021: Registered web context: '/projetoPOO' for server 'default-server'
+2023-05-22 21:57:04,011 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0010: Deployed "projetoPOO.war" (runtime-name : "projetoPOO.war")
+2023-05-22 21:57:04,077 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2023-05-22 21:57:04,080 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2023-05-22 21:57:04,080 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+2023-05-22 21:57:04,080 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 19.1.0.Final (WildFly Core 11.1.1.Final) started in 19415ms - Started 428 of 657 services (379 services are lazy, passive or on-demand)
+2023-05-22 21:57:04,448 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) WFLYJCA0019: Stopped Driver service with driver-name = projetoPOO.war
+2023-05-22 21:57:04,448 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0019: Stopped Driver service with driver-name = projetoPOO.war_org.postgresql.Driver_42_3
+2023-05-22 21:57:04,451 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 21) WFLYUT0022: Unregistered web context: '/projetoPOO' from server 'default-server'
+2023-05-22 21:57:04,489 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0028: Stopped deployment projetoPOO.war (runtime-name: projetoPOO.war) in 43ms
+2023-05-22 21:57:04,533 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0009: Undeployed "projetoPOO.war" (runtime-name: "projetoPOO.war")
+2023-05-22 21:57:04,606 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0027: Starting deployment of "projetoPOO.war" (runtime-name: "projetoPOO.war")
+2023-05-22 21:57:04,952 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-8) WFLYJCA0005: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 42.3)
+2023-05-22 21:57:04,953 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-8) WFLYJCA0005: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 42.3)
+2023-05-22 21:57:04,953 WARN  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-8) WFLYJCA0003: Unable to instantiate driver class "org.postgresql.Driver": org.jboss.msc.service.DuplicateServiceException: Service jboss.jdbc-driver.projetoPOO_war_org_postgresql_Driver_42_3 is already registered
+2023-05-22 21:57:04,962 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-3) WFLYJCA0018: Started Driver service with driver-name = projetoPOO.war_org.postgresql.Driver_42_3
+2023-05-22 21:57:04,963 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0018: Started Driver service with driver-name = projetoPOO.war
+2023-05-22 21:57:04,967 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 31) WFLYUT0021: Registered web context: '/projetoPOO' for server 'default-server'
+2023-05-22 21:57:04,994 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0010: Deployed "projetoPOO.war" (runtime-name : "projetoPOO.war")
+2023-05-22 21:58:01,923 INFO  [stdout] (default task-1) Bateu no login
+2023-05-22 21:58:01,928 INFO  [stdout] (default task-1) Samuel - 11111
+2023-05-22 21:58:02,057 INFO  [stdout] (default task-1) sql: SELECT * FROM usuario WHERE login = 'Samuel'
+2023-05-22 21:58:02,090 INFO  [stdout] (default task-1) Nome do usuario: Samuel Dias
+2023-05-22 21:58:22,172 INFO  [stdout] (default task-1) Bateu no login
+2023-05-22 21:58:22,173 INFO  [stdout] (default task-1) Samuel11 - 1231
+2023-05-22 21:58:22,205 INFO  [stdout] (default task-1) sql: SELECT * FROM usuario WHERE login = 'Samuel11'
+2023-05-22 21:58:22,207 INFO  [stdout] (default task-1) Nome do usuario: null
+2023-05-22 21:58:22,208 INFO  [stdout] (default task-1) usuário null -> null
+2023-05-22 21:58:30,112 INFO  [stdout] (default task-1) Bateu no login
+2023-05-22 21:58:30,112 INFO  [stdout] (default task-1) Samuel - 1234
+2023-05-22 21:58:30,145 INFO  [stdout] (default task-1) sql: SELECT * FROM usuario WHERE login = 'Samuel'
+2023-05-22 21:58:30,147 INFO  [stdout] (default task-1) Nome do usuario: Samuel Dias
+2023-05-22 21:59:08,113 INFO  [stdout] (default task-1) Bateu no registrar login
+2023-05-22 21:59:08,117 INFO  [stdout] (default task-1) Arthur Rodrigues - 1234 - Arthur - 1234
+2023-05-22 21:59:08,235 INFO  [stdout] (default task-1) Usuário cadastrado com sucesso: Arthur
+2023-05-22 21:59:08,235 INFO  [stdout] (default task-1) Usuário cadastrado com sucesso!
+2023-05-22 21:59:17,750 INFO  [stdout] (default task-1) Bateu no login
+2023-05-22 21:59:17,750 INFO  [stdout] (default task-1) Arthur - 1234
+2023-05-22 21:59:17,783 INFO  [stdout] (default task-1) sql: SELECT * FROM usuario WHERE login = 'Arthur'
+2023-05-22 21:59:17,785 INFO  [stdout] (default task-1) Nome do usuario: Arthur Rodrigues
