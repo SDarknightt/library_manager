@@ -2,7 +2,9 @@
 package service;
 
 import dao.ClienteDAO;
+import dao.LivroDAO;
 import model.Cliente;
+import model.Livro;
 
 public class ClienteService {
 
@@ -27,6 +29,12 @@ public class ClienteService {
         ClienteDAO clienteDAO = new ClienteDAO();
         return clienteDAO.verificarClienteExistente(cpf);
     }
-
+    public boolean deletarCliente(Cliente cliente) {
+        ClienteDAO clienteDAO = new ClienteDAO();
+        // Deleta o livro do banco de dados
+        clienteDAO.deletarCliente(cliente);
+        System.out.println("Livro delatado com sucesso: " + cliente.getNome());
+        return true;
+    }
 
 }

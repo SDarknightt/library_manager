@@ -3,7 +3,9 @@ package controller;
 import dao.ClienteDAO;
 import dao.LivroDAO;
 import model.Cliente;
+import model.Livro;
 import service.ClienteService;
+import service.LivroService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -47,6 +49,27 @@ public class ClienteController extends HttpServlet {
                     System.out.println("Falha ao cadastrar cliente!");
                     dispatcher = req.getRequestDispatcher("/index.jsp");
                 }
+            }
+
+            dispatcher.forward(req, resp);
+        }
+
+        else if (acao.equals("deletarcliente")){
+            String id = req.getParameter("idcliente");
+
+            ClienteService clienteService = new ClienteService();
+
+
+            Cliente cliente = new Cliente();
+            cliente.setId(Integer.parseInt(id));
+
+            boolean deletado = clienteService.deletarCliente(cliente);
+            if (deletado) {
+                System.out.println("Livro deletado com sucesso!");
+                dispatcher = req.getRequestDispatcher("clientes.jsp");
+            } else {
+                System.out.println("Falha ao deletar livro!");
+                dispatcher = req.getRequestDispatcher("principal.jsp");
             }
 
             dispatcher.forward(req, resp);

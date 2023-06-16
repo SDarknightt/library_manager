@@ -1,36 +1,36 @@
-<%@ page contentType="text/html; charset=utf-8" language="java"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<%@ page contentType="text/html; charset=utf-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page isELIgnored="false"%>
+
+
+
+<%@ page contentType="text/html; charset=utf-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Visualizar Reservas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            background-color: rgba(210, 210, 210, 0.8);
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
+            background-color: #f8f9fa;
         }
-
         .navbar {
-            width: 100%;
             background-color: #333333;
             padding: 10px;
-            display: flex;
-            justify-content: center;
         }
 
         .navbar ul {
             list-style-type: none;
+            margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
         }
 
         .navbar ul li {
-            display: inline-block;
             margin: 0 10px;
         }
 
@@ -42,40 +42,6 @@
         }
 
         .navbar ul li a:hover {
-            color: #45a049;
-        }
-
-        .options-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-        }
-
-        .option {
-            width: 200px;
-            height: 200px;
-            background-color: #ffffff;
-            border: 1px solid #dddddd;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 20px;
-        }
-
-        .option a {
-            text-decoration: none;
-            color: #333333;
-            font-size: 20px;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        .option:hover {
-            background-color: #f2f2f2;
-        }
-
-        .option:hover a {
             color: #45a049;
         }
 
@@ -101,27 +67,32 @@
         table tbody tr:nth-child(even) {
             background-color: #f9f9f9;
         }
+
+        .devolver-button {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-
-    <div class="navbar">
-        <ul>
-            <li><a href="livros.jsp">Livros</a></li>
-            <li><a href="reservas.jsp">Reservas</a></li>
-            <li><a href="clientes.jsp">Clientes</a></li>
-            <li><a href="livros.jsp">Voltar</a></li>
-        </ul>
-    </div>
-
-    <h1 style="text-align: center">Visualizar Livros</h1>
-    <div class="options-container">
+<nav class="navbar">
+    <ul>
+        <li><a href="livros.jsp">Livros</a></li>
+        <li><a href="reservas.jsp">Reservas</a></li>
+        <li><a href="clientes.jsp">Clientes</a></li>
+        <li><a href="livros.jsp">Voltar</a></li>
+    </ul>
+</nav>
+<h1 style="text-align: center">Visualizar Livros</h1>
+<div class="table-container">
+    <table class="table">
+        <tbody>
         <c:if test="${not empty livros}">
             <table>
                 <thead>
                 <th>ID</th>
                 <th>Nome</th>
                 <th>Gênero</th>
+                <th></th>
                 </thead>
                 <tbody>
                 <c:forEach items="${livros}" var="livro">
@@ -129,12 +100,21 @@
                         <td>${livro.getId()}</td>
                         <td>${livro.getNome()}</td>
                         <td>${livro.getGenero()}</td>
+                        <td>
+                            <form method="POST" action="livrocontroller">
+                                <input type="hidden" name="idlivro" value="${livro.getId()}" />
+                                <input type="hidden" name="acao" value="deletarlivro" />
+                                <button type="submit" class="btn btn-danger devolver-button">Deletar</button>
+                            </form>
+                        </td>
                     </tr>
                 </c:forEach>
                 </tbody>
             </table>
         </c:if>
-    </div>
-
+        </tbody>
+    </table>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

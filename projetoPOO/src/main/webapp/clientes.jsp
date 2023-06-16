@@ -1,33 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Clientes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            background-color: rgba(210, 210, 210, 0.8);
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
+            background-color: #f8f9fa;
         }
-
         .navbar {
-            width: 100%;
             background-color: #333333;
             padding: 10px;
-            display: flex;
-            justify-content: center;
         }
 
         .navbar ul {
             list-style-type: none;
+            margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
         }
 
         .navbar ul li {
-            display: inline-block;
             margin: 0 10px;
         }
 
@@ -58,6 +51,7 @@
             align-items: center;
             justify-content: center;
             margin: 0 20px;
+            transition: background-color 0.3s ease;
         }
 
         .option a {
@@ -65,7 +59,6 @@
             color: #333333;
             font-size: 20px;
             font-weight: bold;
-            transition: color 0.3s ease;
         }
 
         .option:hover {
@@ -78,17 +71,16 @@
     </style>
 </head>
 <body>
-<div class="navbar">
+<nav class="navbar">
     <ul>
         <li><a href="livros.jsp">Livros</a></li>
         <li><a href="reservas.jsp">Reservas</a></li>
         <li><a href="clientes.jsp">Clientes</a></li>
         <li><a href="principal.jsp">Voltar</a></li>
     </ul>
-</div>
+</nav>
 <h1 style="text-align: center">Clientes</h1>
 <div class="options-container">
-
     <div class="option">
         <a href="registrarcliente.jsp">Cadastrar</a>
     </div>
@@ -96,5 +88,6 @@
         <a href="direcionacliente.jsp">Visualizar</a>
     </div>
 </div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

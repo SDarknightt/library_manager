@@ -73,4 +73,17 @@ public class ClienteDAO {//aqui será feito o CRUD
         }
 
     }
+
+    public void deletarCliente(Cliente cliente) {
+        try (Connection con = new ConectaDB().getConexao()) {
+            String sql = "DELETE FROM cliente WHERE idcliente = ?";
+
+            PreparedStatement pt = con.prepareStatement(sql);
+            pt.setInt(1, cliente.getId());
+            pt.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 }
