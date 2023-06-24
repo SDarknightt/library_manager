@@ -3,97 +3,77 @@
 <head>
     <title>Clientes</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .navbar {
-            background-color: #333333;
-            padding: 10px;
-        }
-
-        .navbar ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        .navbar ul li {
-            margin: 0 10px;
-        }
-
-        .navbar ul li a {
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        .navbar ul li a:hover {
-            color: #45a049;
-        }
-
-        .options-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-        }
-
-        .option {
-            width: 200px;
-            height: 200px;
-            background-color: #ffffff;
-            border: 1px solid #dddddd;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 20px;
-            transition: background-color 0.3s ease;
-        }
-
-        .option a {
-            text-decoration: none;
-            color: #333333;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .option:hover {
-            background-color: #f2f2f2;
-        }
-
-        .option:hover a {
-            color: #45a049;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<nav class="navbar">
-    <ul>
-        <li><a href="livros.jsp">Livros</a></li>
-        <li><a href="reservas.jsp">Reservas</a></li>
-        <li><a href="clientes.jsp">Clientes</a></li>
-        <li><a href="index.jsp">Sair</a></li>
-    </ul>
-</nav>
-<h1 style="text-align: center">Biblioteca</h1>
-<div class="options-container">
 
-    <div class="option">
-        <a href="livros.jsp">Livros</a>
+
+<nav class="navbar navbar-expand-lg fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="principal.jsp">Biblioteca</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="livros.jsp">Livros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reservas.jsp">Reservas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="clientes.jsp">Clientes</a>
+                </li>
+                <li class="nav-item">
+                    <a  class="nav-link" href="index.jsp">Sair</a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="option">
-        <a href="reservas.jsp">Reservas</a>
+</nav>
+
+
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+                        <h1>Biblioteca</h1>
+                        <div class="row">
+                            <div class="col-sm-4 mb-3 mb-sm-0">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <a href="livros.jsp" class="btn btn-info">Livros</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 mb-3 mb-sm-0">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <a href="reservas.jsp" class="btn btn-info">Reservas</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <a href="clientes.jsp" class="btn btn-info">Clientes</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
     </div>
-    <div class="option">
-        <a href="clientes.jsp">Clientes</a>
-    </div>
-</div>
+</section>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-

@@ -1,103 +1,76 @@
 <%@ page contentType="text/html; charset=utf-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page isELIgnored="false"%>
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-  <style>
-    body {
-      background-color: #D2D2D2;
-      font-family: Arial, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-
-    .form-container {
-      width: 300px;
-      padding: 20px;
-      background-color: #ffffff;
-      border: 1px solid #dddddd;
-      border-radius: 5px;
-    }
-
-    h2 {
-      text-align: center;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    label {
-      margin-bottom: 5px;
-    }
-
-    input[type="text"],
-    input[type="password"] {
-      padding: 5px;
-      margin-bottom: 10px;
-      border-radius: 3px;
-      border: 1px solid #cccccc;
-    }
-
-    button[type="submit"] {
-      padding: 10px 15px;
-      background-color: #4CAF50;
-      color: #ffffff;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-    }
-
-    button[type="submit"]:hover {
-      background-color: #45a049;
-    }
-  </style>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="container">
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4">
-      <h2 class="text-center">Reservar Livro</h2>
-      <form method="POST" action="reservacontroller">
 
-        <c:if test="${not empty clientes}">
-          <div class="form-group">
-            <label for="cliente">Cliente</label>
-            <select id="cliente" name="idcliente" class="form-control">
-              <option value="">Selecione um cliente</option>
-              <c:forEach items="${clientes}" var="cliente">
-                <option value="${cliente.getId()}">${cliente.getNome()}</option>
-              </c:forEach>
-            </select>
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+
+            <div class="mb-md-5 mt-md-4 pb-5">
+              <h2 class="fw-bold mb-2 text-uppercase">Reservar Livro</h2>
+              <p class="text-white-50 mb-5">Por favor insira os dados!</p>
+
+              <form method="POST" action="reservacontroller">
+
+                <c:if test="${not empty clientes}">
+                  <div class="form-group">
+                    <label for="cliente">Cliente</label>
+                    <select id="cliente" name="idcliente" class="form-control">
+                      <option value="">Selecione um cliente</option>
+                      <c:forEach items="${clientes}" var="cliente">
+                        <option value="${cliente.getId()}">${cliente.getNome()}</option>
+                      </c:forEach>
+                    </select>
+                  </div>
+                </c:if>
+
+                <c:if test="${not empty livros}">
+                  <div class="form-group">
+                    <label for="livro">Livro</label>
+                    <select id="livro" name="idlivro" class="form-control">
+                      <option value="">Selecione um livro</option>
+                      <c:forEach items="${livros}" var="livro">
+                        <option value="${livro.getId()}">${livro.getNome()}</option>
+                      </c:forEach>
+                    </select>
+                  </div>
+                </c:if>
+                <input type="hidden" name="acao" value="reservarlivro">
+
+                <button class="btn btn-outline-light btn-lg px-5" type="submit">Reservar</button>
+                <div>
+                  <a href="reservas.jsp" class="text-white-50 fw-bold">Voltar</a>
+                </div>
+              </form>
+
+            </div>
+
           </div>
-        </c:if>
-
-        <c:if test="${not empty livros}">
-          <div class="form-group">
-            <label for="livro">Livro</label>
-            <select id="livro" name="idlivro" class="form-control">
-              <option value="">Selecione um livro</option>
-              <c:forEach items="${livros}" var="livro">
-                <option value="${livro.getId()}">${livro.getNome()}</option>
-              </c:forEach>
-            </select>
-          </div>
-        </c:if>
-
-        <input type="hidden" name="acao" value="reservarlivro">
-        <br>
-        <button type="submit" class="btn btn-primary">Reservar</button>
-      </form>
-
-      <a href="reservas.jsp">Voltar</a>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</section>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+

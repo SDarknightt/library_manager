@@ -13,93 +13,51 @@
 <head>
   <title>Visualizar Reservas</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    body {
-      background-color: #f8f9fa;
-    }
-    .navbar {
-      background-color: #333333;
-      padding: 10px;
-    }
-
-    .navbar ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-    }
-
-    .navbar ul li {
-      margin: 0 10px;
-    }
-
-    .navbar ul li a {
-      text-decoration: none;
-      color: #ffffff;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    .navbar ul li a:hover {
-      color: #45a049;
-    }
-
-    .table-container {
-      margin-top: 20px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    table th, table td {
-      padding: 8px;
-      border: 1px solid #dddddd;
-      text-align: left;
-    }
-
-    table th {
-      background-color: #f2f2f2;
-    }
-
-    table tbody tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
-
-    .devolver-button {
-      cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<nav class="navbar">
-  <ul>
-    <li><a href="livros.jsp">Livros</a></li>
-    <li><a href="reservas.jsp">Reservas</a></li>
-    <li><a href="clientes.jsp">Clientes</a></li>
-    <li><a href="clientes.jsp">Voltar</a></li>
-  </ul>
+<nav class="navbar navbar-expand-lg fixed-top bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="principal.jsp">Biblioteca</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="livros.jsp">Livros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="reservas.jsp">Reservas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="clientes.jsp">Clientes</a>
+        </li>
+        <li class="nav-item">
+          <a  class="nav-link" href="clientes.jsp">Voltar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
-<h1 style="text-align: center">Visualizar Clientes</h1>
-<div class="table-container">
-  <table class="table">
-    <tbody>
-    <c:if test="${not empty clientes}">
-      <table>
-        <thead>
+
+<section class="vh-100 gradient-custom">
+  <div class="container mt-5">
+    <h1 class="text-center">Clientes Cadastrados</h1>
+
+    <table class="table table-striped table-bordered table-dark">
+      <c:if test="${not empty clientes}">
+        <thead class="thead-dark">
         <tr>
-          <th>ID</th>
           <th>Nome</th>
           <th>CPF</th>
-          <th></th>
+          <th>Ação</th>
         </tr>
         </thead>
+
         <tbody>
         <c:forEach items="${clientes}" var="cliente">
           <tr>
-            <td>${cliente.getId()}</td>
             <td>${cliente.getNome()}</td>
             <td>${cliente.getCpf()}</td>
             <td>
@@ -112,11 +70,11 @@
           </tr>
         </c:forEach>
         </tbody>
-      </table>
-    </c:if>
-    </tbody>
-  </table>
-</div>
+      </c:if>
+    </table>
+  </div>
+</section>
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
