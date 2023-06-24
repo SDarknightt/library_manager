@@ -82,7 +82,7 @@
 <h1 style="text-align: center">Reservas</h1>
 <div class="options-container">
     <div class="option">
-        <a href="reservarlivro.jsp">Reservar</a>
+        <a href="direcionareservarlivro.jsp">Reservar</a>
     </div>
     <div class="option">
         <a href="direcionareserva.jsp">Visualizar</a>

@@ -5,7 +5,9 @@
   Time: 16:34
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=utf-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page isELIgnored="false"%>
 <html>
 <head>
   <style>
@@ -60,22 +62,59 @@
       background-color: #45a049;
     }
   </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
-<div class="form-container">
-  <h2>Reservar Livro</h2>
-  <div>
-    <form method="POST" action="reservacontroller">
-      <label for="cliente">ID do Cliente</label>
-      <input type="text" id="cliente" name="idcliente" required><br />
-      <label for="livro">ID do Livro</label>
-      <input type="text" id="livro" name="idlivro" required><br />
-      <input type="hidden"  name="acao" value="reservarlivro"><br />
-      <br />
-      <button type="submit">Reservar</button>
-    </form>
-    <a href="reservas.jsp">Voltar</a>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <h2 class="text-center">Reservar Livro</h2>
+      <form method="POST" action="reservacontroller">
+
+
+
+
+
+        <c:if test="${not empty clientes}">
+          <div class="form-group">
+            <label for="cliente">Cliente</label>
+            <select id="cliente" name="idcliente" class="form-control">
+              <option value="">Selecione um cliente</option>
+              <c:forEach items="${clientes}" var="cliente">
+                <option value="${cliente.getId()}">${cliente.getNome()}</option>
+              </c:forEach>
+            </select>
+          </div>
+        </c:if>
+
+
+
+        <c:if test="${not empty livros}">
+          <div class="form-group">
+            <label for="livro">Livro</label>
+            <select id="livro" name="idlivro" class="form-control">
+              <option value="">Selecione um livro</option>
+              <c:forEach items="${livros}" var="livro">
+                <option value="${livro.getId()}">${livro.getNome()}</option>
+              </c:forEach>
+            </select>
+          </div>
+        </c:if>
+
+
+        <input type="hidden" name="acao" value="reservarlivro">
+        <br>
+        <button type="submit" class="btn btn-primary">Reservar</button>
+
+      </form>
+
+
+
+      <a href="reservas.jsp">Voltar</a>
+    </div>
   </div>
 </div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </body>
 </html>

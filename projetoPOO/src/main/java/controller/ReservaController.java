@@ -20,7 +20,6 @@ public class ReservaController extends HttpServlet {
     public void service(ServletRequest req, ServletResponse resp) throws ServletException, IOException {
 
         String acao = req.getParameter("acao");
-
         if (acao.equals("devolverlivro")) {
             Reserva reservaaux = new Reserva();
             reservaaux.setLivroid(Integer.parseInt(req.getParameter("idlivro")));
