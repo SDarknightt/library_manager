@@ -6,29 +6,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LivroDAO {//aqui será feito o CRUD
-    /* public boolean verificarLivroExistente(String cpf) {
-        try (Connection con = new ConectaDB().getConexao()) {
-            String sql = "SELECT COUNT(*) FROM cliente WHERE cpf = ?";
-            PreparedStatement pt = con.prepareStatement(sql);
-            pt.setString(1, cpf);
-            System.out.println(pt);
-            ResultSet rs = pt.executeQuery();
-
-            if (rs.next()) {
-                int count = rs.getInt(1);
-                if(count > 0) {
-                    return true;
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return false;
-    }
-*/
-
-
+public class LivroDAO {
     public void adicionarLivro(Livro livro) {
         try (Connection con = new ConectaDB().getConexao()) {
             String sql = "INSERT INTO livro (nomelivro, genero) VALUES (?, ?)";
@@ -41,13 +19,13 @@ public class LivroDAO {//aqui será feito o CRUD
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     public void deletarLivro(Livro livro) {
         try (Connection con = new ConectaDB().getConexao()) {
             String sql = "DELETE FROM livro WHERE idlivro = ?";
 
+            System.out.println("Id livro:" + livro.getId());
             PreparedStatement pt = con.prepareStatement(sql);
             pt.setInt(1, livro.getId());
             pt.executeUpdate();
@@ -57,6 +35,22 @@ public class LivroDAO {//aqui será feito o CRUD
 
     }
 
+    public void editarLivro(Livro livro) {
+        try (Connection con = new ConectaDB().getConexao()) {
+            String sql = "UPDATE livro " +
+                    "SET nomelivro = ?, genero = ? " +
+                    "WHERE idlivro = ?";
+
+            PreparedStatement pt = con.prepareStatement(sql);
+            pt.setString(1, livro.getNome());
+            pt.setString(2, livro.getGenero());
+            pt.setInt(3, livro.getId());
+            pt.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 
     public ArrayList<Livro> getLivros(){
         ArrayList<Livro> livros = new ArrayList<>();
@@ -86,15 +80,15 @@ public class LivroDAO {//aqui será feito o CRUD
         return livros;
     }
 
-    public Livro getLivro(String nomelivro){
+    public Livro getLivro( int idLivro ){
         Livro livro = new Livro();
         try(Connection con = new ConectaDB().getConexao()){
 
             String sql = "SELECT * " +
-                    "FROM livro WHERE nomelivro = ?";
+                    "FROM livro WHERE idlivro = ?";
 
             PreparedStatement pt = con.prepareStatement(sql);
-            pt.setString(1, nomelivro);
+            pt.setInt(1, idLivro);
             System.out.println("sql: "+pt.toString());
             ResultSet rs = pt.executeQuery();
 

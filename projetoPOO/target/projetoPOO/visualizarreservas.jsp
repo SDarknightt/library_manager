@@ -36,11 +36,11 @@
 </nav>
 <section class="vh-100 gradient-custom">
   <div class="container mt-5">
-    <h1 class="text-center">Reservas</h1>
+    <h1 class="text-center titulo">Reservas</h1>
 
     <table class="table table-striped table-bordered table-dark">
       <c:if test="${not empty reservas}">
-        <thead class="thead-dark">
+        <thead class="thead-dark" style="border-radius: 1rem;">
         <tr>
           <th>Cliente</th>
           <th>Livro</th>

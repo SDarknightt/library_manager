@@ -38,7 +38,7 @@
 <section class="vh-100 gradient-custom">
 
     <div class="container mt-5">
-        <h1 class="text-center">Livros Cadastrados</h1>
+        <h1 class="text-center titulo">Livros Cadastrados</h1>
 
         <table class="table table-striped table-bordered table-dark">
             <c:if test="${not empty livros}">
@@ -46,7 +46,8 @@
                 <tr>
                     <th>Nome</th>
                     <th>Gênero</th>
-                    <th>Ação</th>
+                    <th></th>
+                    <th></th>
                 </tr>
                 </thead>
 
@@ -60,6 +61,13 @@
                                 <input type="hidden" name="idlivro" value="${livro.getId()}" />
                                 <input type="hidden" name="acao" value="deletarlivro" />
                                 <button type="submit" class="btn btn-danger devolver-button">Deletar</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form method="POST" action="livrocontroller">
+                                <input type="hidden" name="idlivro" value="${livro.getId()}" />
+                                <input type="hidden" name="acao" value="selecionalivro" />
+                                <button type="submit" class="btn btn-info devolver-button">Editar</button>
                             </form>
                         </td>
                     </tr>

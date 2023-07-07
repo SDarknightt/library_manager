@@ -1,6 +1,7 @@
 package controller;
 
 import dao.LivroDAO;
+import dao.ReservaDAO;
 import dao.UsuarioDAO;
 import model.Livro;
 import service.LivroService;
@@ -48,14 +49,10 @@ public class LivroController extends HttpServlet {
 
         else if (acao.equals("deletarlivro")){
             String id = req.getParameter("idlivro");
-            System.out.println(id);
 
             LivroService livroService = new LivroService();
-
-
             Livro livro = new Livro();
             livro.setId(Integer.parseInt(id));
-
             boolean deletado = livroService.deletarLivro(livro);
             if (deletado) {
                 System.out.println("Livro deletado com sucesso!");
@@ -68,14 +65,37 @@ public class LivroController extends HttpServlet {
             dispatcher.forward(req, resp);
         }
 
-        /*else if (acao.equals("visualizar")){
-            if (req.getAttribute("livros") == null) {
-                req.setAttribute("livros", new LivroDAO().getLivros());
-            }
-            dispatcher = req.getRequestDispatcher("/visualizarlivros.jsp");
-            dispatcher.forward(req, resp);
-        }*/
+        else if (acao.equals("editarlivro")){
+            String id = req.getParameter("idlivro");
+            String nomeLivro = req.getParameter("nomelivro");
+            String genero = req.getParameter("genero");
 
+            LivroService livroService = new LivroService();
+            Livro livro = new Livro();
+            livro.setId(Integer.parseInt(id));
+            livro.setNome(nomeLivro);
+            livro.setGenero(genero);
+
+            boolean editado = livroService.editarLivro(livro);
+            if (editado) {
+                System.out.println("Livro editar com sucesso!");
+                dispatcher = req.getRequestDispatcher("livros.jsp");
+            } else {
+                System.out.println("Falha ao editar livro!");
+                dispatcher = req.getRequestDispatcher("principal.jsp");
+            }
+            dispatcher.forward(req, resp);
+        }
+
+        else if (acao.equals("selecionalivro")){
+            int id = Integer.parseInt(req.getParameter("idlivro"));
+
+            if (req.getAttribute("livro") == null) {
+                req.setAttribute("livro", new LivroDAO().getLivro(id));
+            }
+            dispatcher = req.getRequestDispatcher("/editarlivro.jsp");
+            dispatcher.forward(req, resp);
+        }
 
     }
 }

@@ -28,8 +28,19 @@
                                 </div>
 
                                 <div class="form-outline form-white mb-4">
-                                    <input type="text" name="generolivro" class="form-control form-control-lg" placeholder="Gênero"/>
+                                    <div class="form-group">
+                                        <select id="genero" name="generolivro" class="form-control" required>
+                                            <option value="">Selecione um Gênero</option>
+                                            <option value="Ação">Ação</option>
+                                            <option value="Terror">Terror</option>
+                                            <option value="Ficção">Ficção</option>
+
+                                        </select>
+                                    </div>
                                 </div>
+
+
+
                                 <input type="hidden" name="acao" value="cadastrarlivro">
                                 <button class="btn btn-outline-light btn-lg px-5" type="submit">Cadastrar</button>
                                 <div>

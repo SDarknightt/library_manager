@@ -43,7 +43,7 @@
 
 <section class="vh-100 gradient-custom">
   <div class="container mt-5">
-    <h1 class="text-center">Clientes Cadastrados</h1>
+    <h1 class="text-center titulo">Clientes Cadastrados</h1>
 
     <table class="table table-striped table-bordered table-dark">
       <c:if test="${not empty clientes}">
