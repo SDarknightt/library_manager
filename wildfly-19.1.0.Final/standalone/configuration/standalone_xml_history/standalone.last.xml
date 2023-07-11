@@ -524,4 +524,9 @@
             <remote-destination host="localhost" port="25"/>
         </outbound-socket-binding>
     </socket-binding-group>
+    <deployments>
+        <deployment name="projetoPOO.war" runtime-name="projetoPOO.war">
+            <fs-archive path="D:\Área de Trabalho\Sistemas para Internet\2023.1\POO\projetoPOO\target\projetoPOO.war"/>
+        </deployment>
+    </deployments>
 </server>

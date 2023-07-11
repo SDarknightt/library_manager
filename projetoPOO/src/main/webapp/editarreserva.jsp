@@ -21,24 +21,25 @@
                     <div class="card-body p-5 text-center">
 
                         <div class="mb-md-5 mt-md-4 pb-5">
-                            <h2 class="fw-bold mb-2 text-uppercase">Editar Livro</h2>
-                            <p class="text-white-50 mb-5">Altere o que deseja!</p>
+                            <h2 class="fw-bold mb-2 text-uppercase">Alterar Reserva</h2>
+                            <p class="text-white-50 mb-5">Selecione outro livro!</p>
 
                             <form method="POST" action="reservacontroller">
 
-                                    <c:if test="${not empty livros}">
+                                    <c:if test="${not empty livros }">
                                         <div class="form-group">
                                             <label for="livro">Reserva</label>
-                                            <select id="livro" name="idlivro" class="form-control">
-
+                                            <select id="livro" name="idlivro" class="form-control" >
+                                                <option>Altere o livro</option>
                                                 <c:forEach items="${livros}" var="livro">
-                                                    <option value="${livro.getId()}">${livro.getNome()}</option>
+                                                    <option value="${livro.getId()}"> ${livro.getNome()}</option>
                                                 </c:forEach>
                                             </select>
-
                                         </div>
                                     </c:if>
+                                <h1>${editareserva.getIdreserva}</h1>
 
+                                <input type="hidden" name="idreserva" value="31">
                                 <input type="hidden" name="acao" value="editarreserva">
                                 <button class="btn btn-outline-light btn-lg px-5" type="submit">Editar</button>
                                 <div>

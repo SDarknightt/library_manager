@@ -32,4 +32,12 @@ public class ReservaService {
         return true;
     }
 
+    public boolean editarReserva(Reserva reserva) {
+        ReservaDAO reservaDAO = new ReservaDAO();
+        // Editar a reserva no banco de dados
+        reservaDAO.editarReserva(reserva);
+        System.out.println("Reserva editada com sucesso: Livro -" + reserva.getLivroid() + "Cliente -" + reserva.getClienteid());
+        return true;
+    }
+
 }

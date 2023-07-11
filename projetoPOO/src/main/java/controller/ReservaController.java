@@ -25,9 +25,6 @@ public class ReservaController extends HttpServlet {
             reservaaux.setLivroid(Integer.parseInt(req.getParameter("idlivro")));
             reservaaux.setClienteid(Integer.parseInt(req.getParameter("idcliente")));
 
-            String idReserva = req.getParameter("idreserva");
-            System.out.println("ID da Reserva para devolução: " + idReserva);
-
             ReservaService reservaService = new ReservaService();
             boolean devolvido = reservaService.devolverLivro(reservaaux);
 
@@ -69,14 +66,31 @@ public class ReservaController extends HttpServlet {
             int id = Integer.parseInt(req.getParameter("idreserva"));
             System.out.println("Entrou no seleciona Reserva --> ID: "+ id);
             RequestDispatcher dispatcher;
-            if (req.getAttribute("editareserva") == null) {
-                req.setAttribute("editareserva", new ReservaDAO().getReserva(id));
-            }
+
             if (req.getAttribute("livros") == null) {
                 req.setAttribute("livros", new LivroDAO().getLivros());
             }
+            req.setAttribute("editareserva", new ReservaDAO().getReserva(id));
             dispatcher = req.getRequestDispatcher("/editarreserva.jsp");
             dispatcher.forward(req, resp);
+        }
+
+        else if(acao.equals("editarreserva")) {
+                Reserva reservaaux = new Reserva();
+                reservaaux.setLivroid(Integer.parseInt(req.getParameter("idlivro")));
+                reservaaux.setId(Integer.parseInt(req.getParameter("idreserva")));
+
+                ReservaService reservaService = new ReservaService();
+                boolean editado = reservaService.editarReserva(reservaaux);
+
+                if (editado) {
+                    System.out.println("Reserva editada com sucesso!");
+                } else {
+                    System.out.println("Falha ao editar reserva!");
+                }
+
+                RequestDispatcher dispatcher = req.getRequestDispatcher("reservas.jsp");
+                dispatcher.forward(req, resp);
         }
     }
 }
