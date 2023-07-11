@@ -46,8 +46,8 @@
                 <tr>
                     <th>Nome</th>
                     <th>Gênero</th>
-                    <th></th>
-                    <th></th>
+                    <th>Deletar</th>
+                    <th>Editar</th>
                 </tr>
                 </thead>
 

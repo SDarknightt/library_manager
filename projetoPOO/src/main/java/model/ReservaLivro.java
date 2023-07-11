@@ -1,6 +1,8 @@
 package model;
 
 public class ReservaLivro {
+
+    private int idreserva;
     private int clienteid;
     private String nomecliente;
     private int livroid;
@@ -13,7 +15,22 @@ public class ReservaLivro {
         this.nomelivro = nomelivro;
     }
 
+    public ReservaLivro(int idreserva, int clienteid, String nomecliente, int livroid, String nomelivro) {
+        this.idreserva = idreserva;
+        this.clienteid = clienteid;
+        this.nomecliente = nomecliente;
+        this.livroid = livroid;
+        this.nomelivro = nomelivro;
+    }
     public ReservaLivro() {}
+
+    public int getIdreserva() {
+        return idreserva;
+    }
+
+    public void setIdreserva(int idreserva) {
+        this.idreserva = idreserva;
+    }
 
     public int getClienteid() {
         return clienteid;

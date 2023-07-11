@@ -51,7 +51,8 @@
         <tr>
           <th>Nome</th>
           <th>CPF</th>
-          <th>Ação</th>
+          <th>Deletar</th>
+          <th>Editar</th>
         </tr>
         </thead>
 
@@ -65,6 +66,13 @@
                 <input type="hidden" name="idcliente" value="${cliente.getId()}" />
                 <input type="hidden" name="acao" value="deletarcliente" />
                 <button type="submit" class="btn btn-danger devolver-button">Deletar</button>
+              </form>
+            </td>
+            <td>
+              <form method="POST" action="clientecontroller">
+                <input type="hidden" name="idcliente" value="${cliente.getId()}" />
+                <input type="hidden" name="acao" value="selecionacliente" />
+                <button type="submit" class="btn btn-info devolver-button">Editar</button>
               </form>
             </td>
           </tr>

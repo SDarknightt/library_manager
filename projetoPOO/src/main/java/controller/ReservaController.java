@@ -3,6 +3,7 @@ package controller;
 import dao.LivroDAO;
 import dao.ReservaDAO;
 import model.Reserva;
+import model.ReservaLivro;
 import service.ReservaService;
 
 import javax.servlet.RequestDispatcher;
@@ -18,7 +19,6 @@ public class ReservaController extends HttpServlet {
 
     @Override
     public void service(ServletRequest req, ServletResponse resp) throws ServletException, IOException {
-
         String acao = req.getParameter("acao");
         if (acao.equals("devolverlivro")) {
             Reserva reservaaux = new Reserva();
@@ -65,13 +65,17 @@ public class ReservaController extends HttpServlet {
 
             dispatcher.forward(req, resp);
         }
-        else if (acao.equals("visualizar")){
+        else if (acao.equals("selecionareserva")){
+            int id = Integer.parseInt(req.getParameter("idreserva"));
+            System.out.println("Entrou no seleciona Reserva --> ID: "+ id);
             RequestDispatcher dispatcher;
-
-            if (req.getAttribute("reservas") == null) {
-                req.setAttribute("reservas", new ReservaDAO().getReservas());
+            if (req.getAttribute("editareserva") == null) {
+                req.setAttribute("editareserva", new ReservaDAO().getReserva(id));
             }
-            dispatcher = req.getRequestDispatcher("/visualizarreservas.jsp");
+            if (req.getAttribute("livros") == null) {
+                req.setAttribute("livros", new LivroDAO().getLivros());
+            }
+            dispatcher = req.getRequestDispatcher("/editarreserva.jsp");
             dispatcher.forward(req, resp);
         }
     }

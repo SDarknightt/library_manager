@@ -52,9 +52,7 @@ public class ClienteController extends HttpServlet {
             }
 
             dispatcher.forward(req, resp);
-        }
-
-        else if (acao.equals("deletarcliente")){
+        } else if (acao.equals("deletarcliente")) {
             String id = req.getParameter("idcliente");
 
             ClienteService clienteService = new ClienteService();
@@ -73,13 +71,35 @@ public class ClienteController extends HttpServlet {
             }
 
             dispatcher.forward(req, resp);
+        } else if (acao.equals("editarcliente")){
+            String id = req.getParameter("idcliente");
+            String nome = req.getParameter("nomecliente");
+            String cpf = req.getParameter("cpfcliente");
+
+            ClienteService clienteService = new ClienteService();
+            Cliente cliente = new Cliente();
+            cliente.setId(Integer.parseInt(id));
+            cliente.setNome(nome);
+            cliente.setCpf(cpf);
+
+            boolean editado = clienteService.editarCliente(cliente);
+            if (editado) {
+                System.out.println("Livro editar com sucesso!");
+                dispatcher = req.getRequestDispatcher("clientes.jsp");
+            } else {
+                System.out.println("Falha ao editar livro!");
+                dispatcher = req.getRequestDispatcher("principal.jsp");
+            }
+            dispatcher.forward(req, resp);
         }
 
-        else if (acao.equals("visualizar")){
-            if (req.getAttribute("clientes") == null) {
-                req.setAttribute("clientes", new ClienteDAO().getClientes());
+        else if (acao.equals("selecionacliente")){
+            int id = Integer.parseInt(req.getParameter("idcliente"));
+
+            if (req.getAttribute("cliente") == null) {
+                req.setAttribute("cliente", new ClienteDAO().getCliente(id));
             }
-            dispatcher = req.getRequestDispatcher("/visualizarclientes.jsp");
+            dispatcher = req.getRequestDispatcher("/editarcliente.jsp");
             dispatcher.forward(req, resp);
         }
     }

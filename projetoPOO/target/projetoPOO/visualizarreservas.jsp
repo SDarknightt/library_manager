@@ -44,7 +44,8 @@
         <tr>
           <th>Cliente</th>
           <th>Livro</th>
-          <th>Ação</th>
+          <th>Devolver</th>
+          <th>Editar</th>
         </tr>
         </thead>
 
@@ -58,7 +59,14 @@
                 <input type="hidden" name="idcliente" value="${reserva.getClienteid()}" />
                 <input type="hidden" name="idlivro" value="${reserva.getLivroid()}" />
                 <input type="hidden" name="acao" value="devolverlivro" />
-                <button type="submit" class="btn btn-danger devolver-button">Devolver</button>
+                <button type="submit" class="btn btn-secondary devolver-button">Devolver</button>
+              </form>
+            </td>
+            <td>
+              <form method="POST" action="reservacontroller">
+                <input type="hidden" name="idreserva" value="${reserva.getIdreserva()}"/>
+                <input type="hidden" name="acao" value="selecionareserva"/>
+                <button type="submit" class="btn btn-info devolver-button">Editar</button>
               </form>
             </td>
           </tr>

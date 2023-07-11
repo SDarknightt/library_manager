@@ -87,5 +87,45 @@ public class ClienteDAO {//aqui será feito o CRUD
 
     }
 
+    public void editarCliente(Cliente cliente) {
+        try (Connection con = new ConectaDB().getConexao()) {
+            String sql = "UPDATE cliente " +
+                    "SET nomecliente = ?, cpfcliente = ? " +
+                    "WHERE idcliente = ?";
 
+            PreparedStatement pt = con.prepareStatement(sql);
+            pt.setString(1, cliente.getNome());
+            pt.setString(2, cliente.getCpf());
+            pt.setInt(3, cliente.getId());
+            pt.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public Cliente getCliente( int idCLiente ){
+        Cliente cliente = new Cliente();
+        try(Connection con = new ConectaDB().getConexao()){
+
+            String sql = "SELECT * " +
+                    "FROM cliente WHERE idcliente = ?";
+
+            PreparedStatement pt = con.prepareStatement(sql);
+            pt.setInt(1, idCLiente);
+            System.out.println("sql: "+pt.toString());
+            ResultSet rs = pt.executeQuery();
+
+            while (rs.next()){
+                cliente.setId(rs.getInt("idcliente"));
+                cliente.setNome(rs.getString("nomecliente"));
+                cliente.setCpf(rs.getString("cpfcliente"));
+            }
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        System.out.println("Nome do Cliente: "+cliente.getNome());
+
+        return cliente;
+    }
 }
